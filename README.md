@@ -12,7 +12,7 @@ ComfyUI node for Hunyuan Translation 1.5 (1.8B). Forked and adapted from the ups
 
 ## Nodes
 - `HY-MT1.5 Loader` (Category: `HY-MT1.5`): Select a subfolder inside `models/HY-MT1.5/` (e.g. `HY-MT1.5-1.8B`) and load the tokenizer/model. Outputs a reusable model handle.
-- `HY-MT1.5 Translator` (Category: `HY-MT1.5`): Accepts the optional model handle from the loader (or auto-loads the first available model), target language dropdown（显示中文名称，38 个语种代码：`    "zh": "中文",
+- `HY-MT1.5 Translator` (Category: `HY-MT1.5`): Accepts the optional model handle from the loader (or auto-loads the first available model), target language dropdown（显示中文名称，38 个语种代码：`"zh": "中文",
     "zh-Hant": "繁体中文",
     "yue": "粤语",
     "en": "英语",
