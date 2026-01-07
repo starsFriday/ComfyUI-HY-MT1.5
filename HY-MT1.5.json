@@ -1,0 +1,259 @@
+{
+  "id": "c494dbc4-1385-4bba-b6b9-91cfd9239e25",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "HY-MT1.5 Translator",
+      "pos": [
+        1944.9863917164387,
+        2951.4925544984008
+      ],
+      "size": [
+        414.8694381598166,
+        283.68899931745773
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "HYMT_MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "translation",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HY-MT1.5 Translator"
+      },
+      "widgets_values": [
+        "今天星期四吃什么好呢",
+        "he | 希伯来语",
+        512,
+        0.7,
+        0.6,
+        20,
+        1.05
+      ]
+    },
+    {
+      "id": 2,
+      "type": "HY-MT1.5 Loader",
+      "pos": [
+        1953.327862977128,
+        2846.4466159975696
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "HYMT_MODEL",
+          "links": [
+            1,
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HY-MT1.5 Loader"
+      },
+      "widgets_values": [
+        "HY-MT1.5-1.8B"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "HY-MT1.5 Translator",
+      "pos": [
+        1945.2741959567452,
+        3284.4613793731237
+      ],
+      "size": [
+        414.8694381598166,
+        283.68899931745773
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "HYMT_MODEL",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "translation",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HY-MT1.5 Translator"
+      },
+      "widgets_values": [
+        "今天星期四吃什么好呢",
+        "en | 英语",
+        512,
+        0.7,
+        0.6,
+        20,
+        1.05
+      ]
+    },
+    {
+      "id": 3,
+      "type": "easy showAnything",
+      "pos": [
+        2423.784849189503,
+        2949.2376258594145
+      ],
+      "size": [
+        281.0259999186037,
+        110.61853964653255
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.1",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "ביום היום, יום חמישי, מה ניתן לאכול?"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "easy showAnything",
+      "pos": [
+        2428.7848491895033,
+        3286.918646493832
+      ],
+      "size": [
+        281.0259999186037,
+        110.61853964653255
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.1",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "What should I eat on Thursday today?"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "HYMT_MODEL"
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      0,
+      "HYMT_MODEL"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0610764609500012,
+      "offset": [
+        -1568.1077389713414,
+        -2545.5135788659427
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "frontendVersion": "1.35.9",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
